@@ -7,9 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header></header>
+  <header class="flex bg-cyan-950 p-2 justify-between">
+    <img class="h-20" 
+    src="./assets/logo/console-de-jogos.png" 
+    alt="Logo da loja"
+    />
+
+    <div class="text-slate-50 flex gap-3">
+      <button>Promoções</button> <button>Carrinho</button> <button>Perfil</button>
+    </div>
+    
+  </header>
   <main>
-    <section id="container-produto"></section>
+    <section id="container-produto" class="flex flex-wrap"></section>
   </main>
 
   <script src="./main.js"></script>
