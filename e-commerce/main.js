@@ -1,3 +1,5 @@
+import { iniciarCarrinho } from "./src/menuCarrinho";
+
 const catalogo = [{
     id: 1,
     nome: 'controles recondicionados diversos',
@@ -37,7 +39,7 @@ const catalogo = [{
 }];
 
 for (const produtoCatalogo of catalogo){
-    const cardProduto = `<div class="border-dashed border-2 border-sky-500 w-64 m-2" id="card-produto-${produtoCatalogo.id}">
+    const cardProduto = `<div class="border-solid border-2 border-sky-500 w-64 m-2" id="card-produto-${produtoCatalogo.id}">
     <img src="./assets/img/${produtoCatalogo.arquivo}" 
         alt="Produto 1 da loja StartGames"
         style="height: 200px;"
@@ -50,3 +52,5 @@ for (const produtoCatalogo of catalogo){
 
     document.getElementById("container-produto").innerHTML += cardProduto;
 }
+
+iniciarCarrinho();

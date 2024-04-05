@@ -5,16 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StartGames</title>
   <link rel="stylesheet" href="style.css">
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
 </head>
 <body>
+  <section id="carrinho" class="fixed top-0 right-[-300px] bg-cyan-950 h-screen w-[300px] text-slate-50">
+    <div id="texto-carrinho"  class="flex justify-between m-4">
+      <p>Meu carrinho</p>
+      <button id="fechar-carrinho">
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </button>
+    </div>
+    <section id="produtos-carrinho">
+      <p>compras aqui</p>
+    </section>
+    <p id="preco-total">$500</p>
+    <button>Finalizar Compra</button>
+  </section>
   <header class="flex bg-cyan-950 p-2 justify-between">
     <img class="h-20" 
     src="./assets/logo/console-de-jogos.png" 
     alt="Logo da loja"
     />
 
-    <div class="text-slate-50 flex gap-3">
-      <button>Promoções</button> <button>Carrinho</button> <button>Perfil</button>
+    <div class="text-slate-50 flex gap-3 mx-2">
+      <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping"></i></button> 
+      <button><i class="fa-solid fa-user"></i></button>
     </div>
     
   </header>
@@ -22,6 +44,6 @@
     <section id="container-produto" class="flex flex-wrap"></section>
   </main>
 
-  <script src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
