@@ -14,8 +14,8 @@
   />
 
 </head>
-<body>
-  <section id="carrinho" class="fixed top-0 right-[-300px] bg-cyan-950 h-screen w-[300px] text-slate-50">
+<body class="bg-slate-50">
+  <section id="carrinho" class="fixed top-0 right-[-300px] bg-cyan-950 h-screen w-[300px] text-slate-50 duration-200 border-l border-slate-50 p-5 flex flex-col justify-between">
     <div id="texto-carrinho"  class="flex justify-between m-4">
       <p>Meu carrinho</p>
       <button id="fechar-carrinho">
@@ -23,12 +23,13 @@
       </button>
     </div>
     <section id="produtos-carrinho">
+      
       <p>compras aqui</p>
     </section>
     <p id="preco-total">$500</p>
     <button>Finalizar Compra</button>
   </section>
-  <header class="flex bg-cyan-950 p-2 justify-between">
+  <header class="flex bg-cyan-950 p-2 justify-between z-10">
     <img class="h-20" 
     src="./assets/logo/console-de-jogos.png" 
     alt="Logo da loja"
