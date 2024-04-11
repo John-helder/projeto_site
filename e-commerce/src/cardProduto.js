@@ -1,3 +1,4 @@
+import { adicionarAoCarrinho } from "./menuCarrinho";
 import { catalogo } from "./utilidades";
 
 export function renderizarCatalogo () {
@@ -10,11 +11,16 @@ export function renderizarCatalogo () {
         <p class="text-sm">${produtoCatalogo.marca}</p>
         <p class="text-sm">${produtoCatalogo.nome}</p>
         <p claass="text-sm">${produtoCatalogo.preco}</p>
-        <button class="bg-slate-950 text-slate-200 hover:bg-slate-700">
+        <button id="adicionar-${produtoCatalogo.id}" class="bg-slate-950 text-slate-200 hover:bg-slate-700">
             <i class="fa-solid fa-cart-plus"></i>
         </button>
         </div>`;
 
         document.getElementById("container-produto").innerHTML += cardProduto;
+
+    }
+
+    for (const produtoCatalogo of catalogo) {
+        document.getElementById(`adicionar-${produtoCatalogo.id}`).addEventListener("click", () => adicionarAoCarrinho(produtoCatalogo.id));
     }
 }
